@@ -4,8 +4,9 @@ body {
  justify-content: center;
  align-items: center;
  margin-top: 150px;
- background-color: lightyellow;
- background-image: url('https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg')
+ /*background-color: lightyellow;*/
+ background-image: url('https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg');
+ background-size: cover;
 }
 
 h1 {
