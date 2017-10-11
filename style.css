@@ -4,6 +4,8 @@ body {
  justify-content: center;
  align-items: center;
  margin-top: 150px;
+ background-color: lightyellow;
+ background-image: url('https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg')
 }
 
 h1 {
@@ -33,5 +35,5 @@ input {
 }
 
 .selected {
- background: blue;
+ background: #74992e;
 }

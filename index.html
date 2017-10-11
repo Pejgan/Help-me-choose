@@ -21,6 +21,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
       $(function(){
+        
         /* Hide result section until needed */
         $('.resultSection').hide()
         
@@ -33,10 +34,11 @@
         
 	/* Toggle selected-class on title */
         var toggle_selected = function(){
-          $(this).toggleClass("selected");
+          $("body").toggleClass("selected");
 	  }
 
 	$("h1:first").click(toggle_selected)
+	/*$("body").click(toggle_selected)*/
 
       })
     </script>
