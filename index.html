@@ -1,19 +1,45 @@
 <!doctype html>
-<html lan=en>
-	<head>
-		<meta charset=utf-8>
-		<title>Help me choose</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
-	</head>
-	<body>
-		<h1>Help me choose between...</h1>
-		<img width="203" height="212" src="https://assets.fastcompany.com/image/upload/w_596,c_limit,q_auto:best,f_auto,fl_lossy/wp-cms/uploads/2017/06/i-1-sonic-burger.jpg">
-		<div class="inputSection">
-			<div class="inputs">
-			<input placeholder="Something tasty"></input>			
-			</div>
-			<button class="addOption">Add</button>
-		</div>
-		<button>Go!</button>
-	</body>
+<html lan=en> 
+  
+  <head>
+    <meta charset=utf-8>
+    <title>Help me choose</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head> 
+  
+  <body>
+    <h1>Help me choose between...</h1>
+        <div class="inputSection">
+      <div class="inputs">
+        <input placeholder="Something tasty"></input>			
+      </div>   
+      <button class="addOption">Add</button>
+    </div>
+    <div class="resultSection">And the winner is...</div>
+    <button>Go!</button>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      $(function(){
+        /* Hide result section until needed */
+        $('.resultSection').hide()
+        
+        /* Add input upon add-button click */
+        var add_option = function(){
+          $('.inputs').append('<input placeholder="Another yummy thing"></input>')
+        }
+        
+        $('.addOption').click(add_option)
+        
+	/* Toggle selected-class on title */
+        var toggle_selected = function(){
+          $(this).toggleClass("selected");
+	  }
+
+	$("h1:first").click(toggle_selected)
+
+      })
+    </script>
+  </body> 
+ 
 </html>
