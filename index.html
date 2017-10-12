@@ -33,8 +33,7 @@
         var add_option = function(){
           $('.inputs').append('<input placeholder="Another yummy thing"></input>')
           $('.resultSection').hide()
-        }
-        
+        }        
         $('.addOption').click(add_option)
         
 	/* Toggle selected-class on body when clicking title */
@@ -44,7 +43,6 @@
           $('.inputSection').show()  
           $("h1:first").text("Help me choose between...")      
 	}
-
 	$("h1:first").click(toggle_selected)	
 	
 	/* Select random input when clicking Go */
@@ -54,15 +52,13 @@
             if ($(this).val() !== "") {
             options.push($(this).val())
             }          
-          })
-          
+          })          
           var winner=Math.floor((Math.random()*options.length) + 1)
           $("h1:first").text("And the winner is...")      
           $('.resultSection').text(options[winner - 1])      
           $('.resultSection').show()      
           $('.inputSection').hide()    
-	}
-	  
+	}	  
 	$("button:last").click(submit)	
 			
       })
