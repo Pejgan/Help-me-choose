@@ -8,39 +8,67 @@
   </head> 
   
   <body>
-    <h1>Help me choose between...</h1>
-        <div class="inputSection">
-      <div class="inputs">
-        <input placeholder="Something tasty"></input>			
-      </div>   
-      <button class="addOption">Add</button>
-    </div>
-    <div class="resultSection">And the winner is...</div>
-    <button>Go!</button>
-    
+      <div class="mainFrame">
+      <h1>Help me choose between...</h1>
+      <div class="inputSection">
+        <div class="inputs">
+          <input placeholder="Something tasty"></input>			
+        </div>   
+        <button class="addOption">Add</button>
+      </div>
+      <div class="resultSection">And the winner is...</div>      
+      <div class="goButton">
+        <button>Go!</button>
+      </div>
+      <div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
+      
       $(function(){
         
         /* Hide result section until needed */
         $('.resultSection').hide()
         
-        /* Add input upon add-button click */
+        /* Add input upon add-button click. Also - hide resultSection just in case*/
         var add_option = function(){
           $('.inputs').append('<input placeholder="Another yummy thing"></input>')
+          $('.resultSection').hide()
         }
         
         $('.addOption').click(add_option)
         
 	/* Toggle selected-class on body when clicking title */
         var toggle_selected = function(){
-          $("body").toggleClass("selected");
-	  }
+          $("body").toggleClass("selected")
+          $('.resultSection').hide()      
+          $('.inputSection').show()  
+          $("h1:first").text("Help me choose between...")      
+	}
 
-	$("h1:first").click(toggle_selected)
-	/*$("body").click(toggle_selected)*/
-
+	$("h1:first").click(toggle_selected)	
+	
+	/* Select random input when clicking Go */
+	var options = []	
+	var submit = function(){          
+          $('input').each(function() {
+            if ($(this).val() !== "") {
+            options.push($(this).val())
+            }          
+          })
+          
+          var winner=Math.floor((Math.random()*options.length) + 1)
+          $("h1:first").text("And the winner is...")      
+          $('.resultSection').text(options[winner - 1])      
+          $('.resultSection').show()      
+          $('.inputSection').hide()    
+	}
+	  
+	$("button:last").click(submit)	
+			
       })
+      
+      
+      
     </script>
   </body> 
  
