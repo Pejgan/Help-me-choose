@@ -55,6 +55,7 @@
           })          
           var winner=Math.floor((Math.random()*options.length) + 1)
           $("h1:first").text("And the winner is...")      
+          $("hi:first").toggle("selected")
           $('.resultSection').text(options[winner - 1])      
           $('.resultSection').show()      
           $('.inputSection').hide()    

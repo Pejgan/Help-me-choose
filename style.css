@@ -4,9 +4,10 @@ body {
  justify-content: center;
  align-items: center;
  margin-top: 150px;
- background-image: url('https://static.pexels.com/photos/46239/salmon-dish-food-meal-46239.jpeg'); 
  background-size: cover;
  background-repeat: no-repeat; 
+ background-color: #193356;  
+ background-image: url("https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/14720569_10154017940652005_4162156015967630660_n.jpg?oh=0bf4be5917b6d27e1a3931e5f8bc69e4&oe=5A3C407C"); 
 }
 
 
@@ -28,7 +29,7 @@ h1 {
  display: flex;
  flex-direction: column;
  align-items: center;
- background-color: green;  
+ background-color: #ff5733;
 }
 
 .inputSection {
@@ -51,10 +52,10 @@ input {
 }
 
 .selected {
- background: #74992e;
- background-image: url('https://i1.wp.com/www.saporidibice.com/wp-content/uploads/2015/09/Delivery-Restaurants-Dubai.jpg?fit=1200%2C800&ssl=1');
+ background: #265350;
  background-size: cover;
  background-repeat: no-repeat;
+ background-image: url("https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/12931045_10153579220382005_5932600990600117771_n.jpg?oh=cdab83d6d3cbc34b38108133f2960f5e&oe=5A3F9F09");
 }
 
 .mainFrame {
